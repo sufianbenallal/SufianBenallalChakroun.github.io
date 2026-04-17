@@ -1,10 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mi Primera Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufian Benallal | Telematics Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #e9ecef;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 { margin: 0; color: var(--primary-color); font-size: 2.5em; }
+        .contact-info { margin-top: 10px; font-size: 0.9em; }
+        .contact-info i { color: var(--primary-color); margin-right: 5px; }
+        .contact-info span { margin: 0 10px; }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+        .section { margin-bottom: 25px; }
+        .job, .edu { margin-bottom: 15px; }
+        .job-title, .edu-title { font-weight: bold; font-size: 1.1em; }
+        .date { float: right; color: #666; font-style: italic; }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-category strong { display: block; margin-bottom: 5px; color: var(--primary-color); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 5px; }
+
+        .project-card {
+            background: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .project-card strong { color: var(--primary-color); }
+
+        @media (max-width: 600px) {
+            .date { float: none; display: block; margin-bottom: 5px; }
+            .container { padding: 20px; margin: 10px; }
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola mundo desde GitHub Pages!</h1>
-    <p>Esta página fue creada con amor y código.</p>
+
+<div class="container">
+    <header>
+        <h1>Sufian Benallal Chakroun</h1> [cite: 1]
+        <p><strong>Final-year Telematics Engineering Student</strong></p> [cite: 2]
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> (+34) 628 740 184</span> [cite: 3]
+            <span><i class="fas fa-envelope"></i> sufian-benallal@hotmail.com</span> [cite: 5]
+            <span><i class="fas fa-map-marker-alt"></i> Alcorcón (Madrid), Spain</span> [cite: 7]
+        </div>
+    </header>
+
+    <div class="section">
+        <h2><i class="fas fa-user"></i> Profile</h2>
+        <p>Estudiante de último año de Ingeniería Telemática en busca de prácticas curriculares en telecomunicaciones, redes, sistemas, ciberseguridad o ingeniería de software[cite: 9]. Experiencia práctica en entornos Linux, configuración de redes, programación en Python/C, sistemas VoIP y despliegue en la nube[cite: 10].</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Networking & Telecom</strong>
+                <ul>
+                    <li>TCP/IP, IPv4/IPv6, Subnetting [cite: 14]</li>
+                    <li>OSPF, RIPng, VoIP, QoS [cite: 14]</li>
+                    <li>Asterisk, Wireshark, FRRouting [cite: 15]</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Programming & Systems</strong>
+                <ul>
+                    <li>Python, C, MATLAB, Bash [cite: 17]</li>
+                    <li>Linux, Sockets, REST APIs [cite: 18, 19]</li>
+                    <li>SQL/MariaDB [cite: 19]</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Tools & Platforms</strong>
+                <ul>
+                    <li>AWS (EC2, Gateway, Lambda) [cite: 21]</li>
+                    <li>Git, LaTeX [cite: 22]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
+        <div class="project-card">
+            <strong>VoIP and PBX Configuration (Asterisk):</strong> [cite: 24] Configuración de extensiones, menús IVR, buzón de voz y colas de llamadas en Linux con conectividad inter-PBX[cite: 25, 26].
+        </div>
+        <div class="project-card">
+            <strong>Network Programming (Python):</strong> [cite: 27] Desarrollo de aplicaciones de chat P2P y cliente-servidor usando sockets no bloqueantes, incluyendo transferencia de archivos[cite: 28, 29].
+        </div>
+        <div class="project-card">
+            <strong>Cloud Deployment (AWS):</strong> [cite: 33] Despliegue de servicios en AWS EC2 e integración de microservicios serverless mediante API Gateway/Lambda[cite: 34].
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="job">
+            <span class="date">03/2026 - Present</span> [cite: 38]
+            <div class="job-title">Part-Time Researcher | University of Alcalá, Spain</div> [cite: 36, 37]
+            <ul>
+                <li>Investigación enfocada en el entrenamiento de redes neuronales basadas en Transformers para tareas técnicas de ingeniería[cite: 39].</li>
+            </ul>
+        </div>
+        <div class="job">
+            <span class="date">03/2021 - 09/2021</span> [cite: 44, 46]
+            <div class="job-title">IT Technician | Apple Spezialisten, Berlin, Germany</div> [cite: 43, 45]
+            <ul>
+                <li>Prácticas Erasmus+ enfocadas en reparación de hardware/software Macintosh y mantenimiento de servidores web[cite: 47, 49, 50].</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="edu">
+            <span class="date">2021 - Present</span> [cite: 54]
+            <div class="edu-title">BSc in Telematics Engineering | University of Alcalá</div> [cite: 52, 53]
+        </div>
+        <div class="edu">
+            <span class="date">2025 - 02/2026</span> [cite: 55]
+            <div class="edu-title">BSc in Computer Science (Erasmus) | Oxford Brookes University</div> [cite: 55, 56]
+            <small>Módulos: Machine Learning, AI, Cybersecurity[cite: 57].</small>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-trophy"></i> Awards & Languages</h2>
+        <p><strong>EUGLOH Award:</strong> Best Student in Neural Network Training (University of Szeged)[cite: 61, 62].</p>
+        <p><strong>Idiomas:</strong> Spanish (Native) [cite: 67], English (B2)[cite: 68].</p>
+    </div>
+</div>
+
 </body>
 </html>
