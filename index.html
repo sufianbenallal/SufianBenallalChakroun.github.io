@@ -32,6 +32,7 @@
       background: linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
       padding: 40px 32px;
+      text-align: center;
     }
 
     header h1 {
@@ -46,11 +47,24 @@
       opacity: 0.95;
     }
 
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
     .contact {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 12px 24px;
       font-size: 0.95rem;
+      margin-top: 10px;
     }
 
     .contact a {
@@ -122,21 +136,6 @@
       min-width: 0;
     }
 
-    .tag-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .tag-list li {
-      background: #e0ecff;
-      color: #1e3a8a;
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      margin: 0 8px 8px 0;
-      font-size: 0.9rem;
-    }
-
     footer {
       text-align: center;
       padding: 24px;
@@ -153,15 +152,11 @@
       header h1 {
         font-size: 1.8rem;
       }
+
       .profile-photo {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+        width: 130px;
+        height: 130px;
+      }
     }
   </style>
 </head>
@@ -171,12 +166,13 @@
       <h1>Sufian Benallal Chakroun</h1>
       <h2>Final-year Telematics Engineering Student</h2>
       <img src="profile.jpeg" alt="Foto de Sufian Benallal" class="profile-photo">
+
       <div class="contact">
         <span>📍 Alcorcón (Madrid), Spain</span>
         <span>📞 (+34) 628 740 184</span>
         <span>✉️ <a href="mailto:sufian-benallal@hotmail.com">sufian-benallal@hotmail.com</a></span>
         <span>🔗 <a href="https://www.linkedin.com/in/sufian-benallal-chakroun-6b6aa7204/" target="_blank">LinkedIn</a></span>
-        <a href="Cv_Sufian_Benallal_ENG.pdf" target="_blank">Download PDF CV</a>
+        <span>📄 <a href="Cv_Sufian_Benallal_ENG.pdf" target="_blank">Download PDF CV</a></span>
       </div>
     </header>
 
@@ -194,29 +190,6 @@
         </section>
 
         <section>
-          <h3>Technical Skills</h3>
-          <p><strong>Networking & Telecom</strong></p>
-          <ul>
-            <li>TCP/IP, IPv4/IPv6, subnetting, static routing</li>
-            <li>OSPF, RIPng, VoIP fundamentals, QoS basics</li>
-            <li>Asterisk, PJSIP/IAX2, Wireshark, FRRouting</li>
-          </ul>
-
-          <p><strong>Programming & Systems</strong></p>
-          <ul>
-            <li>Python, C, MATLAB, Bash</li>
-            <li>Linux, socket programming, concurrent programming</li>
-            <li>SQL/MariaDB, REST APIs</li>
-          </ul>
-
-          <p><strong>Tools & Platforms</strong></p>
-          <ul>
-            <li>AWS EC2, API Gateway, Lambda</li>
-            <li>Git, Overleaf/LaTeX, COMNET III</li>
-          </ul>
-        </section>
-
-        <section>
           <h3>Languages</h3>
           <ul>
             <li>Spanish: Native</li>
@@ -227,37 +200,22 @@
 
       <div class="main-content">
         <section>
-          <h3>Selected Projects</h3>
+          <h3>Education</h3>
 
           <div class="item">
-            <h4>VoIP and PBX Configuration with Asterisk</h4>
-            <ul>
-              <li>Configured extensions, IVR menus, voicemail, music on hold and call queues in Linux.</li>
-              <li>Worked with inter-PBX connectivity, database integration and text-to-speech features.</li>
-            </ul>
+            <h4>BSc in Telematics Engineering</h4>
+            <div class="meta">University of Alcalá, Spain | 2021 – Present</div>
           </div>
 
           <div class="item">
-            <h4>Network Programming in Python</h4>
-            <ul>
-              <li>Developed client-server and hybrid P2P chat applications using non-blocking sockets and select().</li>
-              <li>Implemented messaging, file transfer and connection management features.</li>
-            </ul>
+            <h4>BSc in Computer Science (Erasmus Exchange)</h4>
+            <div class="meta">Oxford Brookes University, UK | 2025 – 02/2026</div>
+            <p>Selected modules: Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering</p>
           </div>
 
           <div class="item">
-            <h4>Routing and Network Services</h4>
-            <ul>
-              <li>Configured static routing, OSPF with FRRouting, IPv6-over-IPv4 tunnels and RIPng in virtual machines.</li>
-              <li>Analysed traffic and connectivity using Wireshark and Linux networking tools.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <h4>Cloud Deployment</h4>
-            <ul>
-              <li>Deployed services on AWS EC2 and integrated a simple serverless microservice through API Gateway/Lambda.</li>
-            </ul>
+            <h4>HND in Telecommunications and IT Systems</h4>
+            <div class="meta">IES Benjamín Rúa, Spain | 2019 – 2021</div>
           </div>
         </section>
 
@@ -293,22 +251,61 @@
         </section>
 
         <section>
-          <h3>Education</h3>
+          <h3>Technical Skills</h3>
+
+          <p><strong>Networking & Telecom</strong></p>
+          <ul>
+            <li>TCP/IP, IPv4/IPv6, subnetting, static routing</li>
+            <li>OSPF, RIPng, VoIP fundamentals, QoS basics</li>
+            <li>Asterisk, PJSIP/IAX2, Wireshark, FRRouting</li>
+          </ul>
+
+          <p><strong>Programming & Systems</strong></p>
+          <ul>
+            <li>Python, C, MATLAB, Bash</li>
+            <li>Linux, socket programming, concurrent programming</li>
+            <li>SQL/MariaDB, REST APIs</li>
+          </ul>
+
+          <p><strong>Tools & Platforms</strong></p>
+          <ul>
+            <li>AWS EC2, API Gateway, Lambda</li>
+            <li>Git, Overleaf/LaTeX, COMNET III</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Selected Projects</h3>
 
           <div class="item">
-            <h4>BSc in Telematics Engineering</h4>
-            <div class="meta">University of Alcalá, Spain | 2021 – Present</div>
+            <h4>VoIP and PBX Configuration with Asterisk</h4>
+            <ul>
+              <li>Configured extensions, IVR menus, voicemail, music on hold and call queues in Linux.</li>
+              <li>Worked with inter-PBX connectivity, database integration and text-to-speech features.</li>
+            </ul>
           </div>
 
           <div class="item">
-            <h4>BSc in Computer Science (Erasmus Exchange)</h4>
-            <div class="meta">Oxford Brookes University, UK | 2025 – 02/2026</div>
-            <p>Selected modules: Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering</p>
+            <h4>Network Programming in Python</h4>
+            <ul>
+              <li>Developed client-server and hybrid P2P chat applications using non-blocking sockets and select().</li>
+              <li>Implemented messaging, file transfer and connection management features.</li>
+            </ul>
           </div>
 
           <div class="item">
-            <h4>HND in Telecommunications and IT Systems</h4>
-            <div class="meta">IES Benjamín Rúa, Spain | 2019 – 2021</div>
+            <h4>Routing and Network Services</h4>
+            <ul>
+              <li>Configured static routing, OSPF with FRRouting, IPv6-over-IPv4 tunnels and RIPng in virtual machines.</li>
+              <li>Analysed traffic and connectivity using Wireshark and Linux networking tools.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h4>Cloud Deployment</h4>
+            <ul>
+              <li>Deployed services on AWS EC2 and integrated a simple serverless microservice through API Gateway/Lambda.</li>
+            </ul>
           </div>
         </section>
 
