@@ -1,185 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufian Benallal | Telematics Engineering Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0056b3;
-            --secondary-color: #e9ecef;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary-color);
-            margin-bottom: 15px;
-        }
-        h1 { margin: 0; color: var(--primary-color); font-size: 2.5em; }
-        .contact-info { margin-top: 10px; font-size: 0.9em; }
-        .contact-info i { color: var(--primary-color); margin-right: 5px; }
-        .contact-info span { margin: 0 10px; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sufian Benallal Chakroun | CV</title>
+  <meta name="description" content="CV of Sufian Benallal Chakroun, final-year Telematics Engineering student." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-top: 30px;
-            text-transform: uppercase;
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-        }
-        h2 i { margin-right: 10px; }
-        
-        .section { margin-bottom: 25px; }
-        .job, .edu { margin-bottom: 15px; }
-        .job-title, .edu-title { font-weight: bold; font-size: 1.1em; }
-        .date { float: right; color: #666; font-style: italic; }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .skill-category strong { display: block; margin-bottom: 8px; color: var(--primary-color); }
-        ul { padding-left: 20px; margin: 0; }
-        li { margin-bottom: 5px; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f4f7fb;
+      color: #222;
+    }
 
-        .project-card {
-            background: var(--secondary-color);
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--primary-color);
-        }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
 
-        @media (max-width: 600px) {
-            .date { float: none; display: block; margin-bottom: 5px; }
-            .container { padding: 20px; margin: 10px; }
-        }
-    </style>
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 40px 32px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    header h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: #dbeafe;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 32px;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      color: #1d4ed8;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e5e7eb;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .item {
+      margin-bottom: 20px;
+    }
+
+    .item h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .meta {
+      font-size: 0.92rem;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .sidebar {
+      background: #f8fafc;
+      padding: 24px;
+      border-radius: 12px;
+      height: fit-content;
+    }
+
+    .main-content {
+      min-width: 0;
+    }
+
+    .tag-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tag-list li {
+      background: #e0ecff;
+      color: #1e3a8a;
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #6b7280;
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<div class="container">
+  <div class="container">
     <header>
-        <img src="profile.jpeg" alt="Sufian Benallal" class="profile-pic">
-        <h1>Sufian Benallal Chakroun</h1>
-        <p><strong>Final-year Telematics Engineering Student</strong></p>
-        <div class="contact-info">
-            <span><i class="fas fa-phone"></i> (+34) 628 740 184</span>
-            <span><i class="fas fa-envelope"></i> sufian-benallal@hotmail.com</span>
-            <span><i class="fas fa-map-marker-alt"></i> Alcorcón (Madrid), Spain</span>
-        </div>
+      <h1>Sufian Benallal Chakroun</h1>
+      <h2>Final-year Telematics Engineering Student</h2>
+      <div class="contact">
+        <span>📍 Alcorcón (Madrid), Spain</span>
+        <span>📞 (+34) 628 740 184</span>
+        <span>✉️ <a href="mailto:sufian-benallal@hotmail.com">sufian-benallal@hotmail.com</a></span>
+        <span>🔗 <a href="TU_LINKEDIN" target="_blank">LinkedIn</a></span>
+        <span>🗂️ <a href="TU_PORTFOLIO" target="_blank">Europass Portfolio</a></span>
+      </div>
     </header>
 
-    <div class="section">
-        <h2><i class="fas fa-user"></i> Profile</h2>
-        <p>Final-year Telematics Engineering student seeking a curricular internship in telecommunications, networking, systems, cybersecurity, or software engineering. Hands-on experience in Linux environments, network configuration, Python/C programming, VoIP systems, and cloud deployment.</p>
-    </div>
+    <main>
+      <aside class="sidebar">
+        <section>
+          <h3>Profile</h3>
+          <p>
+            Final-year Telematics Engineering student seeking a curricular internship in
+            telecommunications, networking, systems, cybersecurity or software engineering.
+            Hands-on academic experience in Linux environments, network configuration,
+            Python/C programming, VoIP systems, cloud deployment and technical problem-solving.
+            International background through Erasmus studies and work experience in Germany and the UK.
+          </p>
+        </section>
 
-    <div class="section">
-        <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <strong>Networking & Telecom</strong>
-                <ul>
-                    <li>TCP/IP, IPv4/IPv6, Subnetting</li>
-                    <li>OSPF, RIPng, VoIP, QoS</li>
-                    <li>Asterisk, Wireshark, FRRouting</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <strong>Programming & Systems</strong>
-                <ul>
-                    <li>Python, C, MATLAB, Bash</li>
-                    <li>Linux, Socket Programming, REST APIs</li>
-                    <li>SQL / MariaDB</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <strong>Tools & Platforms</strong>
-                <ul>
-                    <li>AWS (EC2, API Gateway, Lambda)</li>
-                    <li>Git, Overleaf / LaTeX</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        <section>
+          <h3>Technical Skills</h3>
+          <p><strong>Networking & Telecom</strong></p>
+          <ul>
+            <li>TCP/IP, IPv4/IPv6, subnetting, static routing</li>
+            <li>OSPF, RIPng, VoIP fundamentals, QoS basics</li>
+            <li>Asterisk, PJSIP/IAX2, Wireshark, FRRouting</li>
+          </ul>
 
-    <div class="section">
-        <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
-        <div class="project-card">
-            <strong>VoIP and PBX Configuration:</strong> Configured extensions, IVR menus, voicemail, and call queues in Linux using Asterisk. Handled inter-PBX connectivity and database integration.
-        </div>
-        <div class="project-card">
-            <strong>Network Programming:</strong> Developed client-server and hybrid P2P chat applications in Python using non-blocking sockets and select().
-        </div>
-        <div class="project-card">
-            <strong>Cloud Deployment:</strong> Deployed services on AWS EC2 and integrated serverless microservices via API Gateway and Lambda.
-        </div>
-    </div>
+          <p><strong>Programming & Systems</strong></p>
+          <ul>
+            <li>Python, C, MATLAB, Bash</li>
+            <li>Linux, socket programming, concurrent programming</li>
+            <li>SQL/MariaDB, REST APIs</li>
+          </ul>
 
-    <div class="section">
-        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <div class="job">
-            <span class="date">03/2026 - Present</span>
-            <div class="job-title">Part-Time Researcher | University of Alcalá, Spain</div>
+          <p><strong>Tools & Platforms</strong></p>
+          <ul>
+            <li>AWS EC2, API Gateway, Lambda</li>
+            <li>Git, Overleaf/LaTeX, COMNET III</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Languages</h3>
+          <ul>
+            <li>Spanish: Native</li>
+            <li>English: B2</li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="main-content">
+        <section>
+          <h3>Selected Projects</h3>
+
+          <div class="item">
+            <h4>VoIP and PBX Configuration with Asterisk</h4>
             <ul>
-                <li>Researching neural network training based on Transformers for applied engineering and technical research tasks.</li>
+              <li>Configured extensions, IVR menus, voicemail, music on hold and call queues in Linux.</li>
+              <li>Worked with inter-PBX connectivity, database integration and text-to-speech features.</li>
             </ul>
-        </div>
-        <div class="job">
-            <span class="date">03/2021 - 09/2021</span>
-            <div class="job-title">Telecommunications & IT Technician | Apple Spezialisten, Berlin</div>
+          </div>
+
+          <div class="item">
+            <h4>Network Programming in Python</h4>
             <ul>
-                <li>Erasmus+ internship focused on Macintosh hardware/software repair and web server maintenance in an international environment.</li>
+              <li>Developed client-server and hybrid P2P chat applications using non-blocking sockets and select().</li>
+              <li>Implemented messaging, file transfer and connection management features.</li>
             </ul>
-        </div>
-    </div>
+          </div>
 
-    <div class="section">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="edu">
-            <span class="date">2021 - Present</span>
-            <div class="edu-title">BSc in Telematics Engineering | University of Alcalá</div>
-        </div>
-        <div class="edu">
-            <span class="date">2025 - 02/2026</span>
-            <div class="edu-title">BSc in Computer Science (Erasmus) | Oxford Brookes University</div>
-            <p><strong>Selected Modules:</strong> Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering.</p>
-        </div>
-    </div>
-</div>
+          <div class="item">
+            <h4>Routing and Network Services</h4>
+            <ul>
+              <li>Configured static routing, OSPF with FRRouting, IPv6-over-IPv4 tunnels and RIPng in virtual machines.</li>
+              <li>Analysed traffic and connectivity using Wireshark and Linux networking tools.</li>
+            </ul>
+          </div>
 
+          <div class="item">
+            <h4>Cloud Deployment</h4>
+            <ul>
+              <li>Deployed services on AWS EC2 and integrated a simple serverless microservice through API Gateway/Lambda.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Work Experience</h3>
+
+          <div class="item">
+            <h4>Part-Time Researcher</h4>
+            <div class="meta">University of Alcalá, Spain | 03/2026 – Present</div>
+            <p>
+              Research position focused on training a neural network based on transformers for applied engineering and technical research tasks alongside final-year studies.
+            </p>
+          </div>
+
+          <div class="item">
+            <h4>Football Referee</h4>
+            <div class="meta">Royal Madrid Football Federation (RFFM), Madrid, Spain | 02/2017 – Present</div>
+            <ul>
+              <li>Decision-making under pressure in fast-paced environments.</li>
+              <li>Strong communication, teamwork and conflict-management skills.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h4>Telecommunications and IT Technician</h4>
+            <div class="meta">Apple Spezialisten, Berlin, Germany | 03/2021 – 09/2021</div>
+            <ul>
+              <li>Completed an Erasmus+ internship and later continued working with the company.</li>
+              <li>Performed Macintosh hardware and software repair and troubleshooting.</li>
+              <li>Supported web server maintenance and technical IT tasks in an international environment.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Education</h3>
+
+          <div class="item">
+            <h4>BSc in Telematics Engineering</h4>
+            <div class="meta">University of Alcalá, Spain | 2021 – Present</div>
+          </div>
+
+          <div class="item">
+            <h4>BSc in Computer Science (Erasmus Exchange)</h4>
+            <div class="meta">Oxford Brookes University, UK | 2025 – 02/2026</div>
+            <p>Selected modules: Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering</p>
+          </div>
+
+          <div class="item">
+            <h4>HND in Telecommunications and IT Systems</h4>
+            <div class="meta">IES Benjamín Rúa, Spain | 2019 – 2021</div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Awards</h3>
+          <div class="item">
+            <h4>EUGLOH Award – Best Student in Neural Network Training for Thoracic Disease Prediction</h4>
+            <div class="meta">University of Szeged, Hungary | 06/07/2025</div>
+            <p>
+              Awarded for achieving the best performance in training a neural network to predict diseases in the thoracic area from chest X-ray images, within an EUGLOH programme.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Volunteering</h3>
+          <div class="item">
+            <h4>Spanish Teaching Assistant</h4>
+            <div class="meta">Cheney School, Oxford, UK | 09/2025 – 12/2025</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © 2026 Sufian Benallal Chakroun — Curriculum Vitae Website
+    </footer>
+  </div>
 </body>
 </html>
