@@ -1,353 +1,814 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sufian Benallal Chakroun | CV</title>
-  <meta name="description" content="CV de Sufian Benallal Chakroun, estudiante de último curso de Ingeniería Telemática." />
+  <meta
+    name="description"
+    content="CV of Sufian Benallal Chakroun, final-year Telematics Engineering student with experience in telecommunications, networking, Linux systems, programming and technical support."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --card: rgba(255,255,255,0.08);
+      --card-strong: rgba(255,255,255,0.12);
+      --text: #e5eefc;
+      --muted: #a9b7d0;
+      --line: rgba(255,255,255,0.10);
+      --blue: #60a5fa;
+      --blue-2: #2563eb;
+      --cyan: #22d3ee;
+      --purple: #8b5cf6;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius-xl: 26px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --maxw: 1180px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background: #f4f7fb;
-      color: #222;
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), transparent 28%),
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 22%),
+        radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.12), transparent 20%),
+        linear-gradient(180deg, #08101d 0%, #0b1120 42%, #0f172a 100%);
+      line-height: 1.65;
+      min-height: 100vh;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
-      color: white;
-      padding: 40px 32px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-
-    header h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin-bottom: 16px;
-      opacity: 0.95;
-    }
-
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px 24px;
-      font-size: 0.95rem;
-      margin-top: 10px;
-    }
-
-    .contact a {
-      color: #dbeafe;
+    a {
+      color: inherit;
       text-decoration: none;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    main {
-      padding: 32px;
+    .page {
+      width: min(var(--maxw), calc(100% - 32px));
+      margin: 28px auto 40px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
+        linear-gradient(135deg, rgba(37,99,235,0.20), rgba(139,92,246,0.12));
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      margin-bottom: 26px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(10px);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      top: -90px;
+      background: radial-gradient(circle, rgba(96,165,250,0.42), transparent 65%);
+    }
+
+    .hero::after {
+      width: 220px;
+      height: 220px;
+      left: -70px;
+      bottom: -100px;
+      background: radial-gradient(circle, rgba(34,211,238,0.26), transparent 65%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 32px;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      align-items: center;
     }
 
-    section {
-      margin-bottom: 28px;
+    .photo-wrap {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
     }
 
-    h3 {
-      font-size: 1.05rem;
-      color: #1d4ed8;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #e5e7eb;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .photo-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--purple));
+      z-index: 0;
+      filter: blur(0.5px);
     }
 
-    p {
+    .profile-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid rgba(11,17,32,0.95);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.03em;
       margin-bottom: 10px;
     }
 
-    ul {
-      padding-left: 20px;
+    .hero-content h2 {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
-    li {
-      margin-bottom: 8px;
-    }
-
-    .item {
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 20px;
     }
 
-    .item h4 {
-      font-size: 1rem;
-      margin-bottom: 4px;
-      color: #111827;
-    }
-
-    .meta {
-      font-size: 0.92rem;
-      color: #6b7280;
-      margin-bottom: 8px;
-    }
-
-    .sidebar {
-      background: #f8fafc;
-      padding: 24px;
-      border-radius: 12px;
-      height: fit-content;
-    }
-
-    .main-content {
-      min-width: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px;
-      color: #6b7280;
+    .badge {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #dbeafe;
       font-size: 0.9rem;
-      border-top: 1px solid #e5e7eb;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
     }
 
-    @media (max-width: 800px) {
-      main {
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(96,165,250,0.35);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(96,165,250,0.22), rgba(34,211,238,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 1.05rem;
+    }
+
+    .contact-card strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #f8fbff;
+      margin-bottom: 1px;
+    }
+
+    .contact-card span {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+    }
+
+    .panel,
+    .section-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+      align-self: start;
+      position: sticky;
+      top: 20px;
+    }
+
+    .panel section + section {
+      margin-top: 24px;
+    }
+
+    .section-card {
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title .section-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.22), rgba(139,92,246,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 1.1rem;
+    }
+
+    .section-title h3 {
+      font-size: 1.08rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dbeafe;
+    }
+
+    .profile-text {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .list {
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 0 5px rgba(96,165,250,0.08);
+    }
+
+    .skill-group + .skill-group {
+      margin-top: 18px;
+    }
+
+    .skill-group h4 {
+      margin-bottom: 10px;
+      font-size: 0.94rem;
+      color: #f3f7ff;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #dbeafe;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .entry {
+      position: relative;
+      padding: 20px 20px 18px 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 18px;
+      bottom: 18px;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--cyan), var(--blue), var(--purple));
+    }
+
+    .entry-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .entry h4 {
+      font-size: 1rem;
+      color: #f8fbff;
+      font-weight: 700;
+    }
+
+    .entry .company {
+      color: #c7d8f8;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 0.94rem;
+    }
+
+    .entry .date {
+      color: #93c5fd;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(96,165,250,0.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+      align-self: start;
+      white-space: nowrap;
+    }
+
+    .entry p {
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .entry ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .entry li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 12px 6px 0;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
         grid-template-columns: 1fr;
       }
 
-      header h1 {
-        font-size: 1.8rem;
+      .panel {
+        position: static;
       }
 
-      .profile-photo {
-        width: 130px;
-        height: 130px;
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .badge-row,
+      .contact-grid {
+        justify-content: center;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--maxw), calc(100% - 18px));
+        margin: 14px auto 22px;
+      }
+
+      .hero,
+      .panel,
+      .section-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .hero-content h1 {
+        font-size: 1.9rem;
+      }
+
+      .photo-wrap {
+        width: 140px;
+        height: 140px;
+      }
+
+      .entry-top {
+        flex-direction: column;
+      }
+
+      .entry .date {
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Sufian Benallal Chakroun</h1>
-      <h2>Estudiante de Ingeniería Telemática (último curso)</h2>
-      <img src="profile.jpeg" alt="Foto de Sufian Benallal" class="profile-photo">
+  <div class="page">
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="photo-wrap">
+          <img src="profile.jpeg" alt="Photo of Sufian Benallal Chakroun" class="profile-photo">
+        </div>
 
-      <div class="contact">
-        <span>📍 Alcorcón (Madrid), España</span>
-        <span>📞 (+34) 628 740 184</span>
-        <span>✉️ <a href="mailto:sufian-benallal@hotmail.com">sufian-benallal@hotmail.com</a></span>
-        <span>🔗 <a href="https://www.linkedin.com/in/sufian-benallal-chakroun-6b6aa7204/" target="_blank">LinkedIn</a></span>
-        <span>🌐 <a href="https://sufianbenallal.github.io/SufianBenallalChakroun.github.io/" target="_blank">Portfolio</a></span>
-        <span>📄 <a href="Cv_Sufian_Benallal_ES.pdf" target="_blank">Descargar CV en PDF</a></span>
+        <div class="hero-content">
+          <h1>Sufian Benallal Chakroun</h1>
+          <h2>Final-year Telematics Engineering Student</h2>
+
+          <div class="badge-row">
+            <span class="badge">Telecommunications</span>
+            <span class="badge">Networking</span>
+            <span class="badge">Linux Systems</span>
+            <span class="badge">Python &amp; C</span>
+            <span class="badge">Cloud &amp; Web</span>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card" href="#">
+              <div class="icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <span>Alcorcón (Madrid), Spain</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="tel:+34628740184">
+              <div class="icon">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <span>(+34) 628 740 184</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="mailto:sufian-benallal@hotmail.com">
+              <div class="icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <span>sufian-benallal@hotmail.com</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://www.linkedin.com/in/sufian-benallal-chakroun-6b6aa7204/" target="_blank" rel="noopener noreferrer">
+              <div class="icon">🔗</div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Professional profile</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://sufianbenallal.github.io/SufianBenallalChakroun.github.io/" target="_blank" rel="noopener noreferrer">
+              <div class="icon">🌐</div>
+              <div>
+                <strong>Portfolio</strong>
+                <span>Personal website</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="Cv_Sufian_Benallal_ENG.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="icon">📄</div>
+              <div>
+                <strong>PDF CV</strong>
+                <span>Download résumé</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <main>
-      <aside class="sidebar">
+    <div class="layout">
+      <aside class="panel">
         <section>
-          <h3>Perfil</h3>
-          <p>
-            Estudiante de último curso de Ingeniería Telemática con experiencia práctica en
-            telecomunicaciones, redes, sistemas Linux, programación y soporte técnico.
-            Perfil internacional desarrollado mediante Erasmus y experiencia laboral en
-            Alemania y Reino Unido.
+          <div class="section-title">
+            <div class="section-icon">👤</div>
+            <h3>Profile</h3>
+          </div>
+          <p class="profile-text">
+            Final-year Telematics Engineering student with hands-on experience in telecommunications,
+            networking, Linux systems, programming and technical support. International profile built
+            through Erasmus studies and work experience in Germany and the United Kingdom.
           </p>
         </section>
 
         <section>
-          <h3>Idiomas</h3>
-          <ul>
-            <li>Español: Nativo</li>
-            <li>Inglés: B2</li>
+          <div class="section-title">
+            <div class="section-icon">🧠</div>
+            <h3>Technical Skills</h3>
+          </div>
+
+          <div class="skill-group">
+            <h4>Networking &amp; Telecommunications</h4>
+            <div class="chips">
+              <span class="chip">TCP/IP</span>
+              <span class="chip">IPv4/IPv6</span>
+              <span class="chip">Subnetting</span>
+              <span class="chip">Static Routing</span>
+              <span class="chip">OSPF</span>
+              <span class="chip">RIPng</span>
+              <span class="chip">VoIP</span>
+              <span class="chip">QoS Basics</span>
+              <span class="chip">Asterisk</span>
+              <span class="chip">PJSIP / IAX2</span>
+              <span class="chip">Wireshark</span>
+              <span class="chip">FRRouting</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Programming &amp; Systems</h4>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">C</span>
+              <span class="chip">MATLAB</span>
+              <span class="chip">Bash</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Sockets</span>
+              <span class="chip">Concurrent Programming</span>
+              <span class="chip">SQL / MariaDB</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="chips">
+              <span class="chip">AWS EC2</span>
+              <span class="chip">API Gateway</span>
+              <span class="chip">Lambda</span>
+              <span class="chip">Git</span>
+              <span class="chip">Overleaf / LaTeX</span>
+              <span class="chip">COMNET III</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">
+            <div class="section-icon">🌍</div>
+            <h3>Languages</h3>
+          </div>
+          <ul class="list">
+            <li>Spanish: Native</li>
+            <li>English: B2</li>
           </ul>
         </section>
 
         <section>
-          <h3>Habilidades Técnicas</h3>
-
-          <p><strong>Redes y Telecomunicaciones</strong></p>
-          <ul>
-            <li>TCP/IP, IPv4/IPv6, subnetting, routing estático</li>
-            <li>OSPF, RIPng, VoIP, conceptos básicos de QoS</li>
-            <li>Asterisk, PJSIP/IAX2, Wireshark, FRRouting</li>
-          </ul>
-
-          <p><strong>Programación y Sistemas</strong></p>
-          <ul>
-            <li>Python, C, MATLAB, Bash</li>
-            <li>Linux, sockets, programación concurrente</li>
-            <li>SQL/MariaDB, APIs REST</li>
-          </ul>
-
-          <p><strong>Herramientas y Plataformas</strong></p>
-          <ul>
-            <li>AWS EC2, API Gateway, Lambda</li>
-            <li>Git, Overleaf/LaTeX, COMNET III</li>
+          <div class="section-title">
+            <div class="section-icon">🏆</div>
+            <h3>Awards</h3>
+          </div>
+          <ul class="list">
+            <li>EUGLOH Award — Best Student in Neural Network Training (University of Szeged, Hungary, 07/2025)</li>
           </ul>
         </section>
       </aside>
 
-      <div class="main-content">
-        <section>
-          <h3>Educación</h3>
-
-          <div class="item">
-            <h4>Grado en Ingeniería Telemática</h4>
-            <div class="meta">Universidad de Alcalá, España | 2021 – Actualidad</div>
+      <main>
+        <section class="section-card">
+          <div class="section-title">
+            <div class="section-icon">🎓</div>
+            <h3>Education</h3>
           </div>
 
-          <div class="item">
-            <h4>Grado en Informática (Erasmus)</h4>
-            <div class="meta">Oxford Brookes University, Reino Unido | 2025 – 02/2026</div>
-            <p>Asignaturas destacadas: Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering</p>
-          </div>
+          <div class="timeline">
+            <article class="entry">
+              <div class="entry-top">
+                <h4>BSc in Telematics Engineering</h4>
+                <span class="date">2021 – Present</span>
+              </div>
+              <div class="company">University of Alcalá, Spain</div>
+            </article>
 
-          <div class="item">
-            <h4>FP Superior en Sistemas de Telecomunicaciones e Informáticos</h4>
-            <div class="meta">IES Benjamín Rúa, España | 2019 – 2021</div>
-          </div>
-        </section>
+            <article class="entry">
+              <div class="entry-top">
+                <h4>BSc in Computer Science (Erasmus Exchange)</h4>
+                <span class="date">2025 – 02/2026</span>
+              </div>
+              <div class="company">Oxford Brookes University, United Kingdom</div>
+              <p>Selected modules: Machine Learning, Artificial Intelligence, Foundations of Security, Applied Software Engineering.</p>
+            </article>
 
-        <section>
-          <h3>Experiencia</h3>
-
-          <div class="item">
-            <h4>Becario Ingeniero de Telecomunicaciones</h4>
-            <div class="meta">BOINSCA, Madrid, España | 04/2026 – 07/2026</div>
-            <ul>
-              <li>Apoyo en proyectos de instalaciones eléctricas de baja tensión y telecomunicaciones (ICT).</li>
-              <li>Análisis de licitaciones y preparación de documentación técnica y económica.</li>
-              <li>Seguimiento de proyectos y apoyo en la elaboración de documentación técnica.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <h4>Investigador a Tiempo Parcial</h4>
-            <div class="meta">Universidad de Alcalá, España | 03/2026 – Actualidad</div>
-            <p>
-              Trabajo de investigación centrado en el entrenamiento de redes neuronales tipo transformer para aplicaciones de ingeniería.
-            </p>
-          </div>
-
-          <div class="item">
-            <h4>Árbitro de Fútbol</h4>
-            <div class="meta">Real Federación de Fútbol de Madrid (RFFM), Madrid, España | 02/2017 – Actualidad</div>
-            <ul>
-              <li>Toma de decisiones bajo presión en entornos dinámicos.</li>
-              <li>Comunicación, trabajo en equipo y gestión de conflictos.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <h4>Técnico en Telecomunicaciones y TI</h4>
-            <div class="meta">Apple Spezialisten, Berlín, Alemania | 03/2021 – 09/2021</div>
-            <ul>
-              <li>Prácticas Erasmus+ y posterior continuidad profesional en la empresa.</li>
-              <li>Reparación y resolución de incidencias de hardware y software Macintosh.</li>
-              <li>Soporte en mantenimiento de servidores web y tareas técnicas de TI.</li>
-            </ul>
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Higher National Diploma in Telecommunications and IT Systems</h4>
+                <span class="date">2019 – 2021</span>
+              </div>
+              <div class="company">IES Benjamín Rúa, Spain</div>
+            </article>
           </div>
         </section>
 
-        <section>
-          <h3>Proyectos Destacados</h3>
-
-          <div class="item">
-            <h4>Configuración de VoIP y PBX con Asterisk</h4>
-            <ul>
-              <li>Configuración de extensiones, IVR, buzón de voz, música en espera y colas de llamadas.</li>
-              <li>Trabajo con interconexión entre PBX, bases de datos y sistemas de text-to-speech.</li>
-            </ul>
+        <section class="section-card">
+          <div class="section-title">
+            <div class="section-icon">💼</div>
+            <h3>Experience</h3>
           </div>
 
-          <div class="item">
-            <h4>Programación de Redes en Python</h4>
-            <ul>
-              <li>Desarrollo de aplicaciones cliente-servidor y P2P híbridas usando sockets no bloqueantes y <code>select()</code>.</li>
-            </ul>
+          <div class="timeline">
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Junior Telecommunications Engineer Intern</h4>
+                <span class="date">04/2026 – 07/2026</span>
+              </div>
+              <div class="company">BOINSCA, Madrid, Spain</div>
+              <ul>
+                <li>Supported low-voltage electrical and ICT projects, combining technical and project management tasks.</li>
+                <li>Assisted with tender analysis and the preparation of technical and economic documentation.</li>
+                <li>Collaborated in project follow-up and technical project support.</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Part-Time Researcher</h4>
+                <span class="date">03/2026 – Present</span>
+              </div>
+              <div class="company">University of Alcalá, Spain</div>
+              <p>Research role focused on training transformer-based neural networks for applied engineering tasks.</p>
+            </article>
+
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Football Referee</h4>
+                <span class="date">02/2017 – Present</span>
+              </div>
+              <div class="company">Royal Madrid Football Federation (RFFM), Madrid, Spain</div>
+              <ul>
+                <li>Decision-making under pressure in dynamic environments.</li>
+                <li>Strong communication, teamwork and conflict-management skills.</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Telecommunications and IT Technician</h4>
+                <span class="date">03/2021 – 09/2021</span>
+              </div>
+              <div class="company">Apple Spezialisten, Berlin, Germany</div>
+              <ul>
+                <li>Completed an Erasmus+ internship and later continued working with the company.</li>
+                <li>Performed Macintosh hardware and software troubleshooting and repair.</li>
+                <li>Supported web server maintenance and technical IT tasks in an international environment.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-title">
+            <div class="section-icon">🛠️</div>
+            <h3>Selected Projects</h3>
           </div>
 
-          <div class="item">
-            <h4>Servidor Web y Desarrollo Full-Stack</h4>
-            <ul>
-              <li>Despliegue de un servidor web y desarrollo de una página web dinámica con HTML, JavaScript, AJAX y PHP.</li>
-              <li>Integración de bases de datos mediante phpMyAdmin y MariaDB.</li>
-              <li>Implementación de comunicación mediante APIs REST entre cliente y servidor.</li>
-            </ul>
-          </div>
+          <div class="timeline">
+            <article class="entry">
+              <div class="entry-top">
+                <h4>VoIP and PBX Configuration with Asterisk</h4>
+              </div>
+              <ul>
+                <li>Configured extensions, IVR, voicemail, music on hold and call queues.</li>
+                <li>Worked with inter-PBX connectivity, database integration and text-to-speech features.</li>
+              </ul>
+            </article>
 
-          <div class="item">
-            <h4>Servicios de Red y Routing</h4>
-            <ul>
-              <li>Configuración de routing estático, OSPF con FRRouting, túneles IPv6 sobre IPv4 y RIPng en máquinas virtuales.</li>
-              <li>Análisis de tráfico y conectividad con Wireshark y herramientas de Linux.</li>
-            </ul>
-          </div>
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Network Programming in Python</h4>
+              </div>
+              <ul>
+                <li>Developed client-server and hybrid P2P chat applications using non-blocking sockets and <code>select()</code>.</li>
+                <li>Implemented messaging, file transfer and connection-management features.</li>
+              </ul>
+            </article>
 
-          <div class="item">
-            <h4>Despliegue en la Nube</h4>
-            <ul>
-              <li>Despliegue de servicios en AWS EC2 e integración de microservicios serverless con API Gateway y Lambda.</li>
-            </ul>
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Web Server and Full-Stack Development</h4>
+              </div>
+              <ul>
+                <li>Deployed a web server and developed a dynamic website using HTML, JavaScript, AJAX and PHP.</li>
+                <li>Integrated database management with phpMyAdmin and MariaDB.</li>
+                <li>Implemented REST API communication between client and server.</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Routing and Network Services</h4>
+              </div>
+              <ul>
+                <li>Configured static routing, OSPF with FRRouting, IPv6-over-IPv4 tunnels and RIPng in virtual machines.</li>
+                <li>Analysed traffic and connectivity using Wireshark and Linux networking tools.</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Cloud Deployment</h4>
+              </div>
+              <ul>
+                <li>Deployed services on AWS EC2 and integrated a simple serverless microservice through API Gateway and Lambda.</li>
+              </ul>
+            </article>
           </div>
         </section>
 
-        <section>
-          <h3>Premios</h3>
-          <div class="item">
-            <h4>Premio EUGLOH – Mejor Estudiante en Redes Neuronales</h4>
-            <div class="meta">Universidad de Szeged, Hungría | 07/2025</div>
+        <section class="section-card">
+          <div class="section-title">
+            <div class="section-icon">🤝</div>
+            <h3>Volunteering</h3>
+          </div>
+
+          <div class="timeline">
+            <article class="entry">
+              <div class="entry-top">
+                <h4>Spanish Language Assistant</h4>
+                <span class="date">09/2025 – 12/2025</span>
+              </div>
+              <div class="company">Cheney School, Oxford, United Kingdom</div>
+            </article>
           </div>
         </section>
+      </main>
+    </div>
 
-        <section>
-          <h3>Voluntariado</h3>
-          <div class="item">
-            <h4>Asistente de Español</h4>
-            <div class="meta">Cheney School, Oxford, Reino Unido | 09/2025 – 12/2025</div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      © 2026 Sufian Benallal Chakroun — Sitio web de CV
-    </footer>
+    <div class="footer">
+      © 2026 Sufian Benallal Chakroun — CV Website
+    </div>
   </div>
 </body>
 </html>
